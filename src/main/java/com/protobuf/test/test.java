@@ -13,8 +13,8 @@ public class test {
 		  
 	        PersonEntity.Person.Builder personBuilder = PersonEntity.Person.newBuilder();  
 	        personBuilder.setId(1);  
-	        personBuilder.setName("叉叉哥");  
-	        personBuilder.setEmail("xxg@163.com");  
+	        personBuilder.setName("name");  
+	        personBuilder.setEmail("xx@163.com");  
 	       
 	        PersonEntity.Person xxg = personBuilder.build();  
 	          
@@ -32,10 +32,10 @@ public class test {
 	        ByteArrayInputStream input = new ByteArrayInputStream(byteArray);  
 	          
 	        // 反序列化  
-	        PersonEntity.Person xxg2 = PersonEntity.Person.parseFrom(input);  
-	        System.out.println("ID:" + xxg2.getId());  
-	        System.out.println("name:" + xxg2.getName());  
-	        System.out.println("email:" + xxg2.getEmail());  
+	        PersonEntity.Person pe = PersonEntity.Person.parseFrom(input);  
+	        System.out.println("ID:" + pe.getId());  
+	        System.out.println("name:" + pe.getName());  
+	        System.out.println("email:" + pe.getEmail());  
 	        System.out.println("friend:");  
 	       
 	    }
